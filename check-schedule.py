@@ -1,10 +1,12 @@
 import json
 import sys
 import requests
+import urllib3
 #import ssl
 #from io import StringIO, BytesIO
 
 def ProgramMain():
+    urllib3.disable_warnings()
     with open('trip-ids.json') as trips:
         tripsJson=json.load(trips)
 
