@@ -40,7 +40,8 @@ def ProgramMain():
     for morningTrip in tripsJson['morning']:
         for i in response.json():
             if (morningTrip['trip_id']==i['id']):
-                print "{0} exists! Delay is: {1:4d}".format(morningTrip['trip_id'], i['trip_update']['stop_time_update'][0]['arrival']['delay'])
+                delay = float(i['trip_update']['stop_time_update'][0]['arrival']['delay'])/60
+                print "{0} exists! Delay is: {1:4d} minutes".format(morningTrip['trip_id'], delay)
 
 #    for i in response.json():
 #        if (i['id']=="UP-NW_UNW619_V1_B"):
