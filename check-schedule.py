@@ -23,9 +23,9 @@ def ProgramMain():
     authKey = apiCred['authorization']
 
 #    print "accessKey: {0}, secretKey: {1}".format(accessKey, secretKey)
-    print "Morning Trip ID's to look for:"
+    print("Morning Trip ID's to look for:")
     for j in tripsJson['morning']:
-        print "{0}".format(j['trip_id'])
+        print("{0}".format(j['trip_id']))
 
     url = "https://gtfsapi.metrarail.com/gtfs/tripUpdates"
 
@@ -41,7 +41,7 @@ def ProgramMain():
         for i in response.json():
             if (morningTrip['trip_id']==i['id']):
                 delay = float(i['trip_update']['stop_time_update'][0]['arrival']['delay'])/60
-                print "{0} exists! Delay is: {1} minutes".format(morningTrip['trip_id'], delay)
+                print("{0} exists! Delay is: {1} minutes".format(morningTrip['trip_id'], delay))
 
 #    for i in response.json():
 #        if (i['id']=="UP-NW_UNW619_V1_B"):
