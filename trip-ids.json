@@ -3,7 +3,6 @@
     [
         {"trip_id": "UP-N_UN314_V1_A"},
         {"trip_id": "UP-N_UN316_V1_A"},
-        {"trip_id": "UP-N_UN322_V1_A"},
-        {"trip_id": "MD-W_MW2221_V1_C"}
+        {"trip_id": "UP-N_UN322_V1_A"}
     ]
 }
