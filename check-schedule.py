@@ -23,17 +23,25 @@ def ProgramMain():
     authKey = apiCred['authorization']
 
 #    print "accessKey: {0}, secretKey: {1}".format(accessKey, secretKey)
-    print("Morning Trip ID's to look for:")
-    for j in tripsJson['morning']:
-        print("{0}".format(j['trip_id']))
 
-    url = "https://gtfsapi.metrarail.com/gtfs/tripUpdates"
+#   populate central st arrival times
 
     payload = ""
     headers = {
         'Authorization': authKey,
         'cache-control': "no-cache"
     }
+
+    print("Morning Trip ID's to look for:")
+    for j in tripsJson['morning']:
+#        print("{0}".format(j['trip_id']))
+        url = "https://gtfsapi.metrarail.com/gtfs/schedule/stop_times/" + j['trip_id']
+        response = requests.request("GET", url, data=payload, headers=headers)
+        for i in response.json():
+            if (i['stop_id']=="CENTRALST"):
+                print("{0}: Scheduled Central Street at {1}".format(j['trip_id'], i['arrival_time']))
+
+    url = "https://gtfsapi.metrarail.com/gtfs/tripUpdates"
 
     response = requests.request("GET", url, data=payload, headers=headers)
 
