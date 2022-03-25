@@ -1,23 +1,11 @@
 {
     "morning" :
     [
-        {"trip_id": "UP-N_UN314_V1_A"},
-        {"trip_id": "UP-N_UN314_V1_AA"},
-        {"trip_id": "UP-N_UN314_V1_C"},
-        {"trip_id": "UP-N_UN314_V1_D"},
-        {"trip_id": "UP-N_UN314_V1_E"},
-        {"trip_id": "UP-N_UN314_V1_F"},
-        {"trip_id": "UP-N_UN316_V1_A"},
-        {"trip_id": "UP-N_UN316_V1_AA"},
-        {"trip_id": "UP-N_UN316_V1_C"},
-        {"trip_id": "UP-N_UN316_V1_D"},
-        {"trip_id": "UP-N_UN316_V1_E"},
-        {"trip_id": "UP-N_UN316_V1_F"},
-        {"trip_id": "UP-N_UN322_V1_A"},
-        {"trip_id": "UP-N_UN322_V1_AA"},
-        {"trip_id": "UP-N_UN322_V1_C"},
-        {"trip_id": "UP-N_UN322_V1_D"},
-        {"trip_id": "UP-N_UN322_V1_E"},
-        {"trip_id": "UP-N_UN322_V1_F"}
+        {"trip_id": "UP-NW_UNW6100_V1"},
+        {"trip_id": "UP-NW_UNW618_V1"},
+        {"trip_id": "UP-NW_UNW624_V2"},
+        {"trip_id": "UP-NW_UNW632_V1"},
+        {"trip_id": "UP-NW_UNW636_V1"},
+        {"trip_id": "UP-NW_UNW638_V1"}
     ]
 }
