@@ -7,5 +7,12 @@
         {"trip_id": "UP-NW_UNW632_V1"},
         {"trip_id": "UP-NW_UNW636_V1"},
         {"trip_id": "UP-NW_UNW638_V1"}
+    ],
+    "evening" :
+    [
+        {"trip_id": "UP-NW_UNW6211_V1"},
+        {"trip_id": "UP-NW_UNW625_V1"},
+        {"trip_id": "UP-NW_UNW627_V1"},
+        {"trip_id": "UP-NW_UNW633_V2"}
     ]
 }

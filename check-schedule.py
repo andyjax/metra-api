@@ -35,9 +35,18 @@ def ProgramMain():
     url = "https://gtfsapi.metrarail.com/gtfs/tripUpdates"
     tripUpdates_response = requests.request("GET", url, data=payload, headers=headers)
 
-    print("Morning Trip ID's to look for:")
-    for j in tripsJson['morning']:
-#        print("{0}".format(j['trip_id']))
+    val = 0
+    while (not (val=="1" or val=="2")):
+        val = input("Select time period (1 - morning; 2 - evening): ")
+
+
+    if (val=="1"):
+        time='morning'
+    elif (val=="2"):
+        time='evening'
+#    print("Morning Trip ID's to look for:")
+    for j in tripsJson[time]:
+        print("{0}".format(j['trip_id']))
         api_schedule = [j['trip_id']+"_A", j['trip_id']+"_AA", j['trip_id']+"_B", j['trip_id']+"_C", j['trip_id']+"_D"]
         printed = 0
         otc_printed = 0
@@ -49,7 +58,7 @@ def ProgramMain():
 #        response = requests.request("GET", url, data=payload, headers=headers)
             for i in response.json():
                 if (i['stop_id']=="MTPROSPECT" and printed==0):
-                    print("{0}: \n\tScheduled Mount Prospect at {1}".format(j['trip_id'], i['arrival_time']))
+                    print("\tScheduled Mount Prospect at {0}".format(i['arrival_time']))
                     printed = 1
                     if (i['center_boarding']==1):
                         print('\033[93m' + "\tBoards from center platform!".format(j['trip_id']) + '\033[0m')
